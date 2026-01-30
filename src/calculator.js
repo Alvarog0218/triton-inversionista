@@ -77,10 +77,10 @@ export function initCalculator() {
             
             html += `
                 <tr class="${rowClass} transition-colors">
-                    <td class="px-6 py-4">${unitCount} Equipo${unitCount > 1 ? 's' : ''}</td>
-                    <td class="px-6 py-4">${currency.format(totalNet)}</td>
-                    <td class="px-6 py-4 ${isCurrent ? 'text-emerald-400' : 'text-emerald-600'}">${currency.format(share)}</td>
-                    <td class="px-6 py-4 text-slate-500">${currency.format(annual)}</td>
+                    <td class="px-4 md:px-6 py-3 md:py-4">${unitCount} Equipo${unitCount > 1 ? 's' : ''}</td>
+                    <td class="px-4 md:px-6 py-3 md:py-4">${currency.format(totalNet)}</td>
+                    <td class="px-4 md:px-6 py-3 md:py-4 ${isCurrent ? 'text-emerald-400' : 'text-emerald-600'}">${currency.format(share)}</td>
+                    <td class="px-4 md:px-6 py-3 md:py-4 text-slate-500">${currency.format(annual)}</td>
                 </tr>
             `;
         });
