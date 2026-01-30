@@ -1,7 +1,7 @@
 export function initCalculator() {
     // Constants
-    const SALES_PRICE = 80; 
-    const EQUITY_PERCENT = 0.10; 
+    const SALES_PRICE = 80;
+    const EQUITY_PERCENT = 0.10;
 
     // State
     let state = {
@@ -30,7 +30,7 @@ export function initCalculator() {
         opexInput: document.getElementById('opexInput'),
         opexDisplay: document.getElementById('opexDisplay'),
         marginDisplay: document.getElementById('marginDisplay'),
-        
+
         companyNet: document.getElementById('companyNet'),
         investorNet: document.getElementById('investorNet'),
         projectionTable: document.getElementById('projectionTable'),
@@ -41,7 +41,7 @@ export function initCalculator() {
         const margin = SALES_PRICE - state.opex;
         const dailyNetPerUnit = margin * state.barrels;
         const monthlyNetPerUnit = dailyNetPerUnit * state.days;
-        
+
         const totalCompanyNet = monthlyNetPerUnit * state.units;
         const investorShare = totalCompanyNet * EQUITY_PERCENT;
 
@@ -60,7 +60,7 @@ export function initCalculator() {
 
     function updateTable(monthlyNetPerUnit) {
         if (!els.projectionTable) return;
-        
+
         const scenarios = [1, 2, 3, 4, 5];
         let html = '';
 
@@ -71,16 +71,16 @@ export function initCalculator() {
 
             const isCurrent = unitCount === state.units;
             // Highlighting the row if it matches current slider
-            const rowClass = isCurrent 
-                ? "bg-emerald-500/10 border-l-4 border-emerald-500 font-bold text-white" 
+            const rowClass = isCurrent
+                ? "bg-emerald-500/10 border-l-4 border-emerald-500 font-bold text-white"
                 : "hover:bg-white/5 text-slate-400";
-            
+
             html += `
-                <tr class="${rowClass} transition-colors">
-                    <td class="px-4 md:px-6 py-3 md:py-4">${unitCount} Equipo${unitCount > 1 ? 's' : ''}</td>
-                    <td class="px-4 md:px-6 py-3 md:py-4">${currency.format(totalNet)}</td>
-                    <td class="px-4 md:px-6 py-3 md:py-4 ${isCurrent ? 'text-emerald-400' : 'text-emerald-600'}">${currency.format(share)}</td>
-                    <td class="px-4 md:px-6 py-3 md:py-4 text-slate-500">${currency.format(annual)}</td>
+                <tr class="${rowClass} transition-colors text-xs md:text-sm">
+                    <td class="px-3 md:px-6 py-2 md:py-4 whitespace-nowrap">${unitCount} Equipo${unitCount > 1 ? 's' : ''}</td>
+                    <td class="px-3 md:px-6 py-2 md:py-4 whitespace-nowrap">${currency.format(totalNet)}</td>
+                    <td class="px-3 md:px-6 py-2 md:py-4 whitespace-nowrap ${isCurrent ? 'text-emerald-400' : 'text-emerald-600'}">${currency.format(share)}</td>
+                    <td class="px-3 md:px-6 py-2 md:py-4 whitespace-nowrap text-slate-500">${currency.format(annual)}</td>
                 </tr>
             `;
         });
@@ -102,7 +102,7 @@ export function initCalculator() {
     if (els.barrelsInput) els.barrelsInput.addEventListener('input', (e) => { state.barrels = parseInt(e.target.value); calculate(); });
     if (els.daysInput) els.daysInput.addEventListener('input', (e) => { state.days = parseInt(e.target.value); calculate(); });
     if (els.opexInput) els.opexInput.addEventListener('input', (e) => { state.opex = parseInt(e.target.value); calculate(); });
-    
+
     // Bind Reset Button (since onclick inline was removed or needs to be handled)
     // Note: Inline onclick="resetSim()" in HTML will fail because resetSim is not global.
     // We attached 'resetBtn' id to the button in the HTML migration.
