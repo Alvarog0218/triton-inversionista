@@ -331,7 +331,7 @@
     <div
       class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1535320903710-d9cf5d567510?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center opacity-5">
     </div>
-    <div class="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 lg:px-8 relative z-10">
       <div class="text-center max-w-3xl mx-auto mb-16">
         <span
           class="bg-emerald-900/50 text-emerald-300 border border-emerald-500/30 px-4 py-1 rounded-full text-sm font-bold tracking-wide uppercase mb-6 inline-block">Propuesta
@@ -349,19 +349,20 @@
 
       <!-- Investment Stats -->
       <div
-        class="grid md:grid-cols-2 gap-12 bg-slate-800/50 backdrop-blur-md p-10 rounded-3xl border border-white/10 mb-20">
-        <div class="flex flex-col justify-center border-r border-white/10 pr-12">
+        class="grid md:grid-cols-2 gap-12 bg-slate-800/50 backdrop-blur-md p-6 md:p-10 rounded-3xl border border-white/10 mb-20">
+        <div
+          class="flex flex-col justify-center border-b md:border-b-0 md:border-r border-white/10 pb-6 md:pb-0 md:pr-12">
           <p class="text-slate-400 uppercase tracking-widest text-sm font-bold mb-2">
             Monto de Inversión
           </p>
-          <p class="text-5xl font-bold text-white mb-2">$2.000 Millones</p>
+          <p class="text-4xl md:text-5xl font-bold text-white mb-2">$2.000 Millones</p>
           <p class="text-emerald-400 font-mono">Pesos Colombianos (COP)</p>
         </div>
-        <div class="flex flex-col justify-center pl-6">
+        <div class="flex flex-col justify-center pt-6 md:pt-0 md:pl-6">
           <p class="text-slate-400 uppercase tracking-widest text-sm font-bold mb-2">
             Retribución (Equity)
           </p>
-          <p class="text-5xl font-bold text-blue-400 mb-2">10% Global</p>
+          <p class="text-4xl md:text-5xl font-bold text-blue-400 mb-2">10% Global</p>
           <p class="text-slate-300 text-sm">
             Participación sobre utilidades de <strong>TODOS</strong> los
             equipos presentes y futuros.
@@ -372,7 +373,7 @@
       <!-- SIMULATOR -->
       <div class="bg-slate-950 border border-white/10 rounded-3xl overflow-hidden shadow-2xl">
         <div
-          class="p-6 md:p-8 border-b border-white/10 bg-slate-900/50 flex flex-col md:flex-row justify-between items-center gap-6">
+          class="p-5 md:p-8 border-b border-white/10 bg-slate-900/50 flex flex-col md:flex-row justify-between items-center gap-6">
           <div>
             <h3 class="text-2xl font-bold text-white mb-2">
               Simulador de Retorno Financiero
@@ -390,7 +391,7 @@
         <div class="grid lg:grid-cols-12">
           <!-- CONTROLS -->
           <div
-            class="lg:col-span-4 p-6 lg:p-8 bg-slate-900 border-b lg:border-b-0 lg:border-r border-white/10 space-y-6 lg:space-y-8">
+            class="lg:col-span-4 p-5 lg:p-8 bg-slate-900 border-b lg:border-b-0 lg:border-r border-white/10 space-y-6 lg:space-y-8">
             <!-- Control: Equipos -->
             <div>
               <div class="flex justify-between mb-2">
@@ -446,7 +447,7 @@
           </div>
 
           <!-- RESULTS DASHBOARD -->
-          <div class="lg:col-span-8 p-6 lg:p-8 bg-slate-950 flex flex-col gap-6 lg:gap-8">
+          <div class="lg:col-span-8 p-5 lg:p-8 bg-slate-950 flex flex-col gap-6 lg:gap-8">
             <div class="grid md:grid-cols-2 gap-6">
               <!-- Company Net -->
               <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-white/5">
@@ -484,16 +485,16 @@
                   Proyección de Crecimiento de su 10%
                 </h4>
               </div>
-              <div class="overflow-x-auto">
-                <table class="w-full text-left text-sm">
+              <div class="w-full overflow-x-auto">
+                <table class="w-full text-left text-sm whitespace-nowrap">
                   <thead class="bg-slate-950 text-slate-500 uppercase font-bold text-xs">
                     <tr>
-                      <th class="px-6 py-4">Escenario</th>
-                      <th class="px-6 py-4">Utilidad Total Cía.</th>
-                      <th class="px-6 py-4 text-emerald-500">
+                      <th class="px-4 md:px-6 py-3 md:py-4">Escenario</th>
+                      <th class="px-4 md:px-6 py-3 md:py-4">Utilidad Total Cía.</th>
+                      <th class="px-4 md:px-6 py-3 md:py-4 text-emerald-500">
                         Su 10% (Mensual)
                       </th>
-                      <th class="px-6 py-4 text-slate-400">
+                      <th class="px-4 md:px-6 py-3 md:py-4 text-slate-400">
                         Anualizado (10%)
                       </th>
                     </tr>
