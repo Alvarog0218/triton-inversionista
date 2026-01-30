@@ -61,7 +61,7 @@ export function initCalculator() {
     function updateTable(monthlyNetPerUnit) {
         if (!els.projectionTable) return;
         
-        const scenarios = [1, 3, 5, 10];
+        const scenarios = [1, 2, 3, 4, 5];
         let html = '';
 
         scenarios.forEach(unitCount => {
