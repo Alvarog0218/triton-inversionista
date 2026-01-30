@@ -396,7 +396,7 @@
             <div>
               <div class="flex justify-between mb-2">
                 <label class="text-sm font-bold text-slate-300">Cantidad de Equipos</label>
-                <span id="unitsDisplay" class="text-emerald-400 font-bold text-lg">1</span>
+                <span id="unitsDisplay" class="text-emerald-400 font-bold text-lg shrink-0">1</span>
               </div>
               <input type="range" id="unitsInput" min="1" max="10" step="1" value="1"
                 class="w-full h-4 lg:h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer slider-thumb" />
@@ -409,7 +409,7 @@
             <div>
               <div class="flex justify-between mb-2">
                 <label class="text-sm font-bold text-slate-300">Barriles Diarios / Equipo</label>
-                <span id="barrelsDisplay" class="text-blue-400 font-bold text-lg">1000</span>
+                <span id="barrelsDisplay" class="text-blue-400 font-bold text-lg shrink-0">1000</span>
               </div>
               <input type="range" id="barrelsInput" min="500" max="2000" step="100" value="1000"
                 class="w-full h-4 lg:h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer slider-thumb" />
@@ -419,7 +419,7 @@
             <div>
               <div class="flex justify-between mb-2">
                 <label class="text-sm font-bold text-slate-300">Días Operativos / Mes</label>
-                <span id="daysDisplay" class="text-white font-bold text-lg">24</span>
+                <span id="daysDisplay" class="text-white font-bold text-lg shrink-0">24</span>
               </div>
               <input type="range" id="daysInput" min="15" max="30" step="1" value="24"
                 class="w-full h-4 lg:h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer slider-thumb" />
@@ -429,18 +429,18 @@
             <div>
               <div class="flex justify-between mb-2">
                 <label class="text-sm font-bold text-slate-300">Costo Operativo (USD)</label>
-                <span id="opexDisplay" class="text-red-400 font-bold text-lg">$30</span>
+                <span id="opexDisplay" class="text-red-400 font-bold text-lg shrink-0">$30</span>
               </div>
               <input type="range" id="opexInput" min="20" max="50" step="1" value="30"
                 class="w-full h-4 lg:h-2 bg-slate-700 rounded-lg appearance-none cursor-pointer slider-thumb" />
               <div class="mt-4 p-4 bg-slate-800 rounded-lg border border-white/5 text-sm">
                 <div class="flex justify-between mb-1">
                   <span class="text-slate-400">Precio Venta (Fijo):</span>
-                  <span class="text-white font-bold">$80 USD</span>
+                  <span class="text-white font-bold shrink-0">$80 USD</span>
                 </div>
                 <div class="flex justify-between">
                   <span class="text-slate-400">Margen Neto:</span>
-                  <span id="marginDisplay" class="text-emerald-400 font-bold">$50 USD</span>
+                  <span id="marginDisplay" class="text-emerald-400 font-bold shrink-0">$50 USD</span>
                 </div>
               </div>
             </div>
@@ -490,7 +490,7 @@
                   <thead class="bg-slate-950 text-slate-500 uppercase font-bold text-xs">
                     <tr>
                       <th class="px-3 md:px-6 py-2 md:py-4">Escenario</th>
-                      <th class="px-3 md:px-6 py-2 md:py-4">Utilidad Total Cía.</th>
+                      <th class="px-3 md:px-6 py-2 md:py-4 hidden md:table-cell">Utilidad Total Cía.</th>
                       <th class="px-3 md:px-6 py-2 md:py-4 text-emerald-500">
                         Su 10% (Mensual)
                       </th>

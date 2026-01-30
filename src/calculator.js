@@ -78,7 +78,7 @@ export function initCalculator() {
             html += `
                 <tr class="${rowClass} transition-colors text-xs md:text-sm">
                     <td class="px-3 md:px-6 py-2 md:py-4 whitespace-nowrap">${unitCount} Equipo${unitCount > 1 ? 's' : ''}</td>
-                    <td class="px-3 md:px-6 py-2 md:py-4 whitespace-nowrap">${currency.format(totalNet)}</td>
+                    <td class="px-3 md:px-6 py-2 md:py-4 whitespace-nowrap hidden md:table-cell">${currency.format(totalNet)}</td>
                     <td class="px-3 md:px-6 py-2 md:py-4 whitespace-nowrap ${isCurrent ? 'text-emerald-400' : 'text-emerald-600'}">${currency.format(share)}</td>
                     <td class="px-3 md:px-6 py-2 md:py-4 whitespace-nowrap text-slate-500">${currency.format(annual)}</td>
                 </tr>
