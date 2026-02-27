@@ -1,7 +1,7 @@
 export function initCalculator() {
     // Constants
     const SALES_PRICE = 80;
-    const EQUITY_PERCENT = 0.10;
+    const EQUITY_PERCENT = 0.05;
 
     // State
     let state = {
