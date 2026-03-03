@@ -668,7 +668,7 @@
           <p class="text-slate-400 uppercase tracking-widest text-sm font-bold mb-2">
             Monto de Inversión
           </p>
-          <p class="text-4xl md:text-5xl font-bold text-white mb-2">$1.000 Millones</p>
+          <p class="text-4xl md:text-5xl font-bold text-white mb-2">$1.400 Millones</p>
           <p class="text-emerald-400 font-mono">Pesos Colombianos (COP)</p>
         </div>
         <div class="flex flex-col justify-center pt-6 md:pt-0 md:pl-6">
@@ -761,17 +761,17 @@
 
           <!-- RESULTS DASHBOARD -->
           <div class="lg:col-span-8 p-5 lg:p-8 bg-slate-950 flex flex-col gap-6 lg:gap-8">
-            <div class="grid md:grid-cols-2 gap-6">
+            <div class="grid md:grid-cols-3 gap-6">
               <!-- Company Net -->
               <div class="bg-gradient-to-br from-slate-800 to-slate-900 p-6 rounded-2xl border border-white/5">
                 <p class="text-xs text-slate-400 uppercase font-bold tracking-wider mb-2">
                   Utilidad Neta Compañía (Mensual)
                 </p>
-                <h3 id="companyNet" class="text-3xl lg:text-4xl font-bold text-white">
+                <h3 id="companyNet" class="text-2xl lg:text-3xl font-bold text-white">
                   $1,200,000
                 </h3>
                 <p class="text-sm text-slate-500 mt-2">
-                  USD - Flujo total de la operación
+                  USD - Flujo total
                 </p>
               </div>
               <!-- Investor Net -->
@@ -782,11 +782,26 @@
                 <p class="text-xs text-emerald-400 uppercase font-bold tracking-wider mb-2">
                   Su Retorno (10% Mensual)
                 </p>
-                <h3 id="investorNet" class="text-3xl lg:text-4xl font-bold text-emerald-400 text-glow">
+                <h3 id="investorNet" class="text-2xl lg:text-3xl font-bold text-emerald-400 text-glow">
                   $120,000
                 </h3>
                 <p class="text-sm text-emerald-200/60 mt-2">
-                  USD - Dividendo proyectado
+                  USD - Dividendo est.
+                </p>
+              </div>
+              <!-- Recoup Days -->
+              <div
+                class="bg-gradient-to-br from-blue-900/50 to-slate-900 p-6 rounded-2xl border border-blue-500/30 relative overflow-hidden group">
+                <div class="absolute inset-0 bg-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity">
+                </div>
+                <p class="text-xs text-blue-400 uppercase font-bold tracking-wider mb-2">
+                  Recuperación de Capital
+                </p>
+                <h3 id="recoupDays" class="text-2xl lg:text-3xl font-bold text-blue-400 text-glow">
+                  -- Días
+                </h3>
+                <p class="text-sm text-blue-200/60 mt-2">
+                  Tiempo estimado (ROI)
                 </p>
               </div>
             </div>
