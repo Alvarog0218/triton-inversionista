@@ -1,6 +1,8 @@
 export function initCalculator() {
     // Constants
     const SALES_PRICE = 80;
+    const TRM = 3700;
+    const INVESTMENT_COP = 1400000000;
     const EQUITY_PERCENT = 0.10;
 
     // State
@@ -33,6 +35,7 @@ export function initCalculator() {
 
         companyNet: document.getElementById('companyNet'),
         investorNet: document.getElementById('investorNet'),
+        recoupDays: document.getElementById('recoupDays'),
         projectionTable: document.getElementById('projectionTable'),
         resetBtn: document.getElementById('resetBtn')
     };
@@ -45,10 +48,16 @@ export function initCalculator() {
         const totalCompanyNet = monthlyNetPerUnit * state.units;
         const investorShare = totalCompanyNet * EQUITY_PERCENT;
 
+        // ROI Calculation: Investment in USD / Daily Average Share (Calendar)
+        const investmentUSD = INVESTMENT_COP / TRM;
+        const dailyInvestorNet = (investorShare / 30); // 30 calendar days for ROI
+        const daysToRecoup = dailyInvestorNet > 0 ? Math.ceil(investmentUSD / dailyInvestorNet) : 0;
+
         // Update UI
         if (els.marginDisplay) els.marginDisplay.innerText = currency.format(margin);
         if (els.companyNet) els.companyNet.innerText = currency.format(totalCompanyNet);
         if (els.investorNet) els.investorNet.innerText = currency.format(investorShare);
+        if (els.recoupDays) els.recoupDays.innerText = daysToRecoup.toLocaleString() + " Días";
 
         if (els.unitsDisplay) els.unitsDisplay.innerText = state.units;
         if (els.barrelsDisplay) els.barrelsDisplay.innerText = state.barrels;
